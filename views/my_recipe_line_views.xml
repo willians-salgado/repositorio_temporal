@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="my_recipe_line_view_search" model="ir.ui.view">
+        <field name="name">my.recipe.line.view.search</field>
+        <field name="model">my.recipe.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_tmpl_id"/>
+                <field name="apply_on_variants_ids"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="my_recipe_line_view_tree" model="ir.ui.view">
+        <field name="name">my.recipe.line.view.tree</field>
+        <field name="model">my.recipe.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_tmpl_id"/>
+                <field name="apply_on_variants_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="my_recipe_line_action" model="ir.actions.act_window">
+        <field name="name">My Recipe Lines</field>
+        <field name="res_model">my.recipe.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

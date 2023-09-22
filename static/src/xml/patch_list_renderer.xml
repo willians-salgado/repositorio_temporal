@@ -1,0 +1,12 @@
+<templates id="template" xml:space="preserve">
+    <t t-name="benoit_recipe_widget.duplicate_tables_rows" t-inherit="web.ListRenderer.Rows" t-inherit-mode="extension" owl="1">
+        <xpath expr="//t[@t-foreach='list.records']" position="replace">
+            <t t-foreach="getCustomList(list.records, 'Example')" t-as="record" t-key="record.id">
+                <t t-call="{{ constructor.recordRowTemplate }}"/>
+            </t>
+            <t t-foreach="getCustomList(list.records, 'hola')" t-as="record" t-key="record.id">
+                <t t-call="{{ constructor.recordRowTemplate }}"/>
+            </t>
+        </xpath>
+    </t>
+</templates>
